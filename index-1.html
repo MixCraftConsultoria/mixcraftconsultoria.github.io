@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b0b0b">
+  <meta name="description" content="Mix Craft Consultoria: cardápios de drinks, fichas técnicas, precificação e treinamento para bares e restaurantes.">
+  <title>Mix Craft Consultoria | Drinks com estratégia</title>
+  <style>
+    :root{--bg:#0b0b0b;--panel:#131313;--panel2:#191714;--gold:#d6b36a;--gold2:#f1d89a;--text:#f7f3ea;--muted:#b8b1a4;--line:rgba(214,179,106,.25);--max:1120px}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.6}
+    a{color:inherit;text-decoration:none}
+    .wrap{width:min(var(--max),calc(100% - 40px));margin:auto}
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:22px 0;border-bottom:1px solid rgba(255,255,255,.08)}
+    .brand{display:flex;align-items:center;gap:12px;font-size:.95rem;letter-spacing:.14em;font-weight:800}
+    .mark{display:grid;place-items:center;width:42px;height:42px;border:1px solid var(--gold);border-radius:50%;color:var(--gold);font-family:Georgia,serif;font-size:1.25rem}
+    .navlinks{display:flex;gap:22px;color:var(--muted);font-size:.88rem}
+    .navlinks a:hover,.textlink:hover{color:var(--gold2)}
+    .eyebrow{color:var(--gold);text-transform:uppercase;letter-spacing:.22em;font-size:.72rem;font-weight:800}
+    .hero{position:relative;overflow:hidden;padding:92px 0 82px;background:radial-gradient(ellipse at 82% 30%,rgba(214,179,106,.16),transparent 34%),linear-gradient(120deg,#0b0b0b 40%,#15120d 100%)}
+    .hero:after{content:"";position:absolute;width:360px;height:360px;border:1px solid rgba(214,179,106,.18);border-radius:50%;right:-90px;top:30px;box-shadow:0 0 0 35px rgba(214,179,106,.025),0 0 0 70px rgba(214,179,106,.02);pointer-events:none}
+    .hero-grid{display:grid;grid-template-columns:1.12fr .88fr;align-items:center;gap:52px;position:relative;z-index:1}
+    h1,h2,h3,p{margin-top:0}
+    h1{font-family:Georgia,"Times New Roman",serif;font-weight:500;font-size:clamp(2.8rem,6vw,5.25rem);line-height:1.02;letter-spacing:-.04em;margin:18px 0 24px}
+    h1 span{color:var(--gold2);font-style:italic}
+    .lead{max-width:590px;color:#d1cbc0;font-size:1.08rem}
+    .actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:13px 19px;border-radius:3px;font-weight:800;font-size:.88rem;transition:.2s}
+    .btn-gold{background:var(--gold);color:#17130a;border:1px solid var(--gold)}
+    .btn-gold:hover{background:var(--gold2);transform:translateY(-2px)}
+    .btn-outline{border:1px solid rgba(214,179,106,.55);color:var(--text)}
+    .btn-outline:hover{background:rgba(214,179,106,.09)}
+    .visual{min-height:380px;display:grid;place-items:center;position:relative}
+    .halo{position:absolute;width:min(350px,90%);aspect-ratio:1;border:1px solid rgba(214,179,106,.36);border-radius:50%;box-shadow:0 0 80px rgba(214,179,106,.07),inset 0 0 50px rgba(214,179,106,.05)}
+    .glass{position:relative;width:210px;height:250px;display:flex;align-items:center;justify-content:center}
+    .cocktail{position:relative;width:156px;height:160px;border:2px solid rgba(241,216,154,.85);border-top:0;border-radius:0 0 75px 75px;transform:perspective(300px) rotateX(-4deg);background:linear-gradient(180deg,rgba(214,179,106,.05),rgba(214,179,106,.26) 60%,rgba(130,70,22,.52));box-shadow:inset 0 -18px 25px rgba(241,216,154,.12),0 20px 50px rgba(0,0,0,.4)}
+    .cocktail:before{content:"";position:absolute;top:-1px;left:-15px;width:182px;height:13px;border:2px solid var(--gold2);border-radius:50%;background:#17130d}
+    .cocktail:after{content:"";position:absolute;left:15px;right:15px;bottom:18px;height:2px;background:rgba(241,216,154,.65);box-shadow:0 -14px rgba(241,216,154,.18),0 -28px rgba(241,216,154,.12)}
+    .garnish{position:absolute;top:35px;right:24px;width:88px;height:14px;border:2px solid var(--gold2);border-radius:100%;transform:rotate(-35deg)}
+    .garnish:after{content:"";position:absolute;width:2px;height:58px;background:var(--gold2);left:42px;top:-24px;transform:rotate(35deg)}
+    .base{position:absolute;bottom:34px;width:180px;height:20px;border-radius:50%;background:radial-gradient(ellipse,rgba(214,179,106,.23),transparent 70%)}
+    .visual-label{position:absolute;bottom:10px;right:0;border:1px solid var(--line);padding:10px 14px;background:rgba(11,11,11,.8);color:var(--gold2);font-size:.74rem;letter-spacing:.12em;text-transform:uppercase}
+    section{padding:78px 0}
+    .section-head{max-width:680px;margin-bottom:34px}
+    h2{font-family:Georgia,"Times New Roman",serif;font-weight:500;font-size:clamp(2rem,4vw,3.3rem);line-height:1.1;letter-spacing:-.025em;margin:12px 0 16px}
+    .section-intro{color:var(--muted);max-width:660px}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .card{padding:25px;background:linear-gradient(145deg,#151515,#10100f);border:1px solid rgba(255,255,255,.08);min-height:220px}
+    .card .num{color:var(--gold);font-family:Georgia,serif;font-size:1.8rem}
+    .card h3{font-size:1.1rem;margin:14px 0 8px}
+    .card p{color:var(--muted);font-size:.93rem;margin-bottom:0}
+    .band{background:linear-gradient(100deg,#18150f,#100f0d);border-block:1px solid var(--line)}
+    .split{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:start}
+    .steps{display:grid;gap:0}
+    .step{display:grid;grid-template-columns:44px 1fr;gap:16px;padding:18px 0;border-bottom:1px solid rgba(255,255,255,.1)}
+    .stepno{display:grid;place-items:center;width:36px;height:36px;border:1px solid var(--gold);color:var(--gold);border-radius:50%;font-size:.85rem}
+    .step h3{margin:2px 0 5px;font-size:1rem}
+    .step p{margin:0;color:var(--muted);font-size:.92rem}
+    .portfolio{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .project{min-height:270px;position:relative;overflow:hidden;background:linear-gradient(145deg,#282016,#10100f 70%);border:1px solid var(--line);padding:22px;display:flex;flex-direction:column;justify-content:flex-end}
+    .project:before{content:"";position:absolute;width:170px;height:170px;border:1px solid rgba(241,216,154,.4);border-radius:50%;top:24px;right:-32px;box-shadow:0 0 0 20px rgba(214,179,106,.04),0 0 0 42px rgba(214,179,106,.025)}
+    .project:nth-child(2){background:linear-gradient(145deg,#1d2420,#0f100f 70%)}
+    .project:nth-child(3){background:linear-gradient(145deg,#281b19,#10100f 70%)}
+    .project .tag{font-size:.7rem;text-transform:uppercase;letter-spacing:.15em;color:var(--gold2)}
+    .project h3{position:relative;margin:9px 0 7px;font-family:Georgia,serif;font-weight:500;font-size:1.45rem}
+    .project p{position:relative;color:var(--muted);font-size:.88rem;margin:0}
+    .note{font-size:.82rem;color:#a59c8b;margin-top:14px}
+    .cta{padding:60px 0;background:radial-gradient(ellipse at 50% 100%,rgba(214,179,106,.13),transparent 55%)}
+    .cta-box{text-align:center;border:1px solid var(--line);padding:50px 24px;background:rgba(20,18,14,.72)}
+    .cta-box p{color:var(--muted);max-width:610px;margin:0 auto 24px}
+    footer{padding:28px 0;border-top:1px solid rgba(255,255,255,.1);color:var(--muted);font-size:.82rem}
+    .footer-row{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}
+    .gold{color:var(--gold2)}
+    @media(max-width:800px){.navlinks{display:none}.hero{padding:66px 0 52px}.hero-grid,.split{grid-template-columns:1fr;gap:30px}.visual{min-height:300px}.cards,.portfolio{grid-template-columns:1fr}.card{min-height:auto}.project{min-height:230px}section{padding:58px 0}.hero:after{right:-230px}}
+  </style>
+</head>
+<body>
+  <header class="wrap">
+    <nav class="nav" aria-label="Navegação principal">
+      <a class="brand" href="#inicio"><span class="mark">MC</span><span>MIX CRAFT<br><small style="font-weight:500;color:#b8b1a4;letter-spacing:.22em;font-size:.62rem">CONSULTORIA</small></span></a>
+      <div class="navlinks"><a href="#servicos">Serviços</a><a href="#metodo">Método</a><a href="#portfolio">Portfólio</a><a href="#contato">Contato</a></div>
+      <a class="btn btn-outline" href="#contato">Vamos conversar ↗</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="wrap hero-grid">
+        <div>
+          <div class="eyebrow">Consultoria para bares e restaurantes</div>
+          <h1>Drinks com identidade.<br><span>Gestão com estratégia.</span></h1>
+          <p class="lead">Criamos experiências de bar com cardápios autorais, fichas técnicas e precificação organizada — para unir criatividade, padrão e visão de negócio.</p>
+          <div class="actions">
+            <a class="btn btn-gold" href="#contato">Quero conversar sobre meu bar ↗</a>
+            <a class="btn btn-outline" href="#portfolio">Conhecer conceitos</a>
+          </div>
+        </div>
+        <div class="visual" aria-label="Ilustração abstrata de um coquetel">
+          <div class="halo"></div><div class="glass"><div class="garnish"></div><div class="cocktail"></div></div><div class="base"></div>
+          <div class="visual-label">Criatividade • Técnica • Resultado</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="servicos">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="eyebrow">O que fazemos</div>
+          <h2>Um bar mais organizado começa por trás do balcão.</h2>
+          <p class="section-intro">A Mix Craft ajuda estabelecimentos a estruturar a operação de drinks com processos claros, receitas replicáveis e um cardápio alinhado à proposta da casa.</p>
+        </div>
+        <div class="cards">
+          <article class="card"><div class="num">01</div><h3>Cardápios de drinks</h3><p>Conceitos, nomes, descrições e combinações pensadas para conversar com o estilo do estabelecimento e a experiência do cliente.</p></article>
+          <article class="card"><div class="num">02</div><h3>Fichas técnicas e CMV</h3><p>Padronização de ingredientes, medidas, rendimento e custo por receita para apoiar o controle e as decisões de preço.</p></article>
+          <article class="card"><div class="num">03</div><h3>Treinamento e padrão</h3><p>Orientações práticas para preparo, apresentação e consistência dos drinks entre diferentes profissionais e turnos.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="band" id="metodo">
+      <div class="wrap split">
+        <div>
+          <div class="eyebrow">Nosso método</div>
+          <h2>Do conceito à execução, com clareza em cada etapa.</h2>
+          <p class="section-intro">Cada projeto começa entendendo a realidade do negócio. A proposta é criar soluções que façam sentido para a identidade, a equipe e a operação do local.</p>
+          <a class="textlink gold" href="#contato">Converse sobre seu projeto ↗</a>
+        </div>
+        <div class="steps">
+          <div class="step"><div class="stepno">1</div><div><h3>Diagnóstico inicial</h3><p>Entendemos o perfil do bar, o cardápio atual, a operação e os objetivos do estabelecimento.</p></div></div>
+          <div class="step"><div class="stepno">2</div><div><h3>Estruturação</h3><p>Organizamos receitas, fichas técnicas, custos e conceitos de drinks de acordo com o escopo combinado.</p></div></div>
+          <div class="step"><div class="stepno">3</div><div><h3>Implementação</h3><p>Definimos materiais e orientações para facilitar a aplicação prática pela equipe.</p></div></div>
+          <div class="step"><div class="stepno">4</div><div><h3>Ajustes e evolução</h3><p>Avaliamos o que pode ser aprimorado a partir do retorno da operação e dos objetivos do cliente.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="portfolio">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="eyebrow">Portfólio conceitual</div>
+          <h2>Ideias que transformam o cardápio em experiência.</h2>
+          <p class="section-intro">Estes são exemplos demonstrativos de direção criativa — não projetos de clientes. Podemos desenvolver uma linguagem própria para cada estabelecimento.</p>
+        </div>
+        <div class="portfolio">
+          <article class="project"><div class="tag">Conceito 01 · Clássico contemporâneo</div><h3>Golden Hour</h3><p>Uma proposta visual elegante para um drink cítrico e aromático, com apresentação limpa e marcante.</p></article>
+          <article class="project"><div class="tag">Conceito 02 · Frescor botânico</div><h3>Jardim Secreto</h3><p>Uma direção leve e herbal, ideal para um cardápio que valoriza frescor, aroma e ingredientes reconhecíveis.</p></article>
+          <article class="project"><div class="tag">Conceito 03 · Assinatura da casa</div><h3>Black Label</h3><p>Uma proposta de apresentação intensa e sofisticada para destacar um coquetel autoral da casa.</p></article>
+        </div>
+        <p class="note">Observação: nomes e descrições acima são conceitos criativos ilustrativos. Receitas, custos, fotos e resultados reais podem ser adicionados conforme os projetos forem desenvolvidos.</p>
+      </div>
+    </section>
+
+    <section class="cta" id="contato">
+      <div class="wrap">
+        <div class="cta-box">
+          <div class="eyebrow">Vamos conversar</div>
+          <h2>Seu próximo cardápio pode começar aqui.</h2>
+          <p>Quer organizar as fichas técnicas, revisar os custos ou desenvolver uma carta de drinks com a identidade do seu estabelecimento? Entre em contato para conversar sobre o projeto.</p>
+          <!-- TROQUE o número abaixo pelo seu WhatsApp com código do país. Exemplo: 5561999999999 -->
+          <a class="btn btn-gold" href="https://wa.me/55SEUNUMEROAQUI?text=Olá%2C%20quero%20conhecer%20a%20Mix%20Craft%20Consultoria." target="_blank" rel="noopener">Solicitar contato pelo WhatsApp ↗</a>
+          <p class="note">Antes de publicar, substitua o número de exemplo pelo WhatsApp comercial correto.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer-row">
+      <div><span class="gold">MIX CRAFT CONSULTORIA</span><br>Drinks com identidade. Gestão com estratégia.</div>
+      <div>© <span id="year"></span> Mix Craft Consultoria · Brasília, DF</div>
+    </div>
+  </footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
