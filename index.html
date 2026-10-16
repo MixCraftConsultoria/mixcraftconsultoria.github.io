@@ -73,14 +73,62 @@
     footer{padding:28px 0;border-top:1px solid rgba(255,255,255,.1);color:var(--muted);font-size:.82rem}
     .footer-row{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}
     .gold{color:var(--gold2)}
+
+    /* SEÇÃO DE PLANOS — estilos isolados para preservar o restante do site */
+    .mix-plans{--mix-bg:#101010;--mix-card:#181818;--mix-text:#f5f2ed;--mix-muted:#aaa7a0;--mix-silver:#c4c8cc;--mix-gold:#d4ad66;--mix-line:#33312d;background:var(--mix-bg);color:var(--mix-text);padding:90px 22px;font-family:Arial,Helvetica,sans-serif}
+    .mix-plans *,.mix-plans *::before,.mix-plans *::after{box-sizing:border-box}
+    .mix-plans-container{width:100%;max-width:1200px;margin:0 auto}
+    .mix-plans-header{max-width:760px;margin:0 auto 55px;text-align:center}
+    .mix-eyebrow{display:inline-block;color:var(--mix-gold);font-size:11px;font-weight:700;letter-spacing:3px;line-height:1.8}
+    .mix-plans-header h2,.mix-plans-footer h2{margin:18px 0;color:var(--mix-text);font-size:clamp(30px,4vw,48px);font-weight:700;line-height:1.15;letter-spacing:-1.2px}
+    .mix-plans h2 span{color:var(--mix-gold)}
+    .mix-plans-header>p,.mix-plans-footer>p{max-width:640px;margin:0 auto;color:var(--mix-muted);font-size:15px;line-height:1.8}
+    .mix-plans-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));align-items:stretch;gap:22px}
+    .mix-plan{position:relative;display:flex;flex-direction:column;min-width:0;padding:32px 25px 26px;background:var(--mix-card);border:1px solid var(--mix-line);border-radius:12px;transition:transform .25s ease,border-color .25s ease}
+    .mix-plan:hover{transform:translateY(-5px)}
+    .mix-prata{border-top:3px solid var(--mix-silver)}
+    .mix-gold{border-top:3px solid var(--mix-gold)}
+    .mix-platinum{border:1px solid #63d9d0;border-top:3px solid #63d9d0;background:linear-gradient(160deg,#192827 0%,#202d2c 22%,#171b1b 55%,#171717 100%);box-shadow:inset 0 1px 0 rgba(141,233,226,.08)}
+    .mix-plan-label{color:var(--mix-muted);font-size:10px;font-weight:700;letter-spacing:2px}
+    .mix-plan h3{margin:17px 0 7px;color:var(--mix-text);font-size:34px;font-weight:700;letter-spacing:.3px}
+    .mix-prata h3{color:var(--mix-silver)}
+    .mix-gold h3{color:var(--mix-gold)}
+    .mix-platinum h3{color:#8de9e2;text-shadow:0 0 18px rgba(99,217,208,.12)}
+    .mix-plan-subtitle{margin:0 0 12px;color:var(--mix-text);font-size:15px;font-weight:700;line-height:1.5}
+    .mix-plan-description{margin:0;color:var(--mix-muted);font-size:13px;line-height:1.8}
+    .mix-plan-divider{height:1px;margin:25px 0;background:var(--mix-line)}
+    .mix-platinum .mix-plan-divider{background:#345653}
+    .mix-includes{margin:-7px 0 17px;color:var(--mix-gold);font-size:10px;font-weight:700;letter-spacing:1px;line-height:1.7}
+    .mix-plan-features{display:flex;flex-direction:column;gap:17px;margin:0 0 30px;padding:0;list-style:none}
+    .mix-plan-features li{position:relative;padding-left:23px;color:#dedbd5;font-size:13px;line-height:1.65;overflow-wrap:anywhere}
+    .mix-plan-features li::before{content:"✓";position:absolute;top:0;left:0;color:var(--mix-gold);font-size:14px;font-weight:700}
+    .mix-prata .mix-plan-features li::before{color:var(--mix-silver)}
+    .mix-platinum .mix-plan-features li::before{color:#63d9d0}
+    .mix-plan-button{display:block;width:100%;margin-top:auto;padding:15px 12px;border:1px solid #68645b;border-radius:5px;color:var(--mix-text);text-align:center;text-decoration:none;text-transform:uppercase;font-size:10px;font-weight:700;letter-spacing:1.1px;transition:background .2s ease,color .2s ease}
+    .mix-plan-button:hover{background:var(--mix-text);border-color:var(--mix-text);color:#151515}
+    .mix-gold .mix-plan-button{background:var(--mix-gold);border-color:var(--mix-gold);color:#17130c}
+    .mix-gold .mix-plan-button:hover{background:#ead2a2}
+    .mix-platinum .mix-plan-button{background:linear-gradient(135deg,#8de9e2,#55c9c0);border-color:#63d9d0;color:#102120}
+    .mix-platinum .mix-plan-button:hover{background:#b4f4ef;border-color:#b4f4ef}
+    .mix-plan-badge{position:absolute;top:-13px;right:17px;padding:7px 11px;background:var(--mix-gold);border-radius:3px;color:#17130c;font-size:9px;font-weight:800;letter-spacing:1px}
+    .mix-platinum .mix-plan-badge{background:linear-gradient(135deg,#b4f4ef,#63d9d0);color:#102120}
+    .mix-plans-footer{margin-top:85px;padding:55px 25px;border:1px solid var(--mix-line);border-radius:12px;text-align:center;background:radial-gradient(ellipse at top,#282219 0%,#151515 65%)}
+    .mix-plans-footer h2{margin-top:16px}
+    .mix-contact-button{display:inline-flex;align-items:center;justify-content:center;gap:12px;margin-top:28px;padding:16px 25px;background:var(--mix-gold);border:1px solid var(--mix-gold);border-radius:5px;color:#17130c;text-decoration:none;font-size:12px;font-weight:800;letter-spacing:.5px;transition:background .2s ease}
+    .mix-contact-button:hover{background:#ead2a2}
+    .mix-plans a:focus-visible{outline:2px solid white;outline-offset:4px}
+
+    @media(max-width:900px){.mix-plans-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.mix-platinum{grid-column:1/-1}.mix-platinum .mix-plan-features{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:20px}}
     @media(max-width:800px){.navlinks{display:none}.hero{padding:66px 0 52px}.hero-grid,.split{grid-template-columns:1fr;gap:30px}.visual{min-height:300px}.cards,.portfolio{grid-template-columns:1fr}.card{min-height:auto}.project{min-height:230px}section{padding:58px 0}.hero:after{right:-230px}}
+    @media(max-width:600px){.mix-plans{padding:60px 16px}.mix-plans-header{margin-bottom:38px}.mix-plans-header h2,.mix-plans-footer h2{font-size:32px;letter-spacing:-.6px}.mix-plans-grid{grid-template-columns:minmax(0,1fr);gap:25px}.mix-platinum{grid-column:auto}.mix-platinum .mix-plan-features{display:flex}.mix-plan{padding:28px 22px 24px}.mix-plans-footer{margin-top:55px;padding:40px 20px}.mix-contact-button{width:100%;padding:16px 12px}}
+    @media(prefers-reduced-motion:reduce){.mix-plan,.mix-plan-button,.mix-contact-button{transition:none}}
   </style>
 </head>
 <body>
   <header class="wrap">
     <nav class="nav" aria-label="Navegação principal">
       <a class="brand" href="#inicio"><span class="mark">MC</span><span>MIX CRAFT<br><small style="font-weight:500;color:#b8b1a4;letter-spacing:.22em;font-size:.62rem">CONSULTORIA</small></span></a>
-      <div class="navlinks"><a href="#servicos">Serviços</a><a href="#metodo">Método</a><a href="#portfolio">Portfólio</a><a href="#contato">Contato</a></div>
+      <div class="navlinks"><a href="#servicos">Serviços</a><a href="#metodo">Método</a><a href="#portfolio">Portfólio</a><a href="#planos">Planos</a><a href="#contato">Contato</a></div>
       <a class="btn btn-outline" href="#contato">Vamos conversar ↗</a>
     </nav>
   </header>
@@ -152,15 +200,89 @@
       </div>
     </section>
 
+    <!-- PLANOS MIX CRAFT -->
+    <section class="mix-plans" id="planos">
+      <div class="mix-plans-container">
+        <div class="mix-plans-header">
+          <span class="mix-eyebrow">MIX CRAFT CONSULTORIA</span>
+          <h2>Escolha o nível da <span>transformação</span> do seu bar.</h2>
+          <p>Soluções estratégicas para elevar seus drinks, desenvolver sua equipe e melhorar a rentabilidade da sua operação.</p>
+        </div>
+
+        <div class="mix-plans-grid">
+          <article class="mix-plan mix-prata">
+            <div class="mix-plan-top">
+              <span class="mix-plan-label">PLANO 01</span>
+              <h3>Prata</h3>
+              <p class="mix-plan-subtitle">O essencial para evoluir.</p>
+              <p class="mix-plan-description">Profissionalize seu cardápio e melhore a organização do seu bar.</p>
+            </div>
+            <div class="mix-plan-divider"></div>
+            <ul class="mix-plan-features">
+              <li>Desenvolvimento de cardápio personalizado</li>
+              <li>Fichas técnicas com receitas e medidas padronizadas</li>
+              <li>Orientação sobre apresentação e execução dos drinks</li>
+              <li>Organização e padronização da operação</li>
+            </ul>
+            <a href="https://wa.me/5561981331246?text=Ol%C3%A1%21%20Tenho%20interesse%20no%20Plano%20Prata%20da%20Mix%20Craft%20Consultoria.%20Gostaria%20de%20receber%20mais%20informa%C3%A7%C3%B5es." class="mix-plan-button" target="_blank" rel="noopener noreferrer">Solicitar orçamento</a>
+          </article>
+
+          <article class="mix-plan mix-gold">
+            <div class="mix-plan-top">
+              <span class="mix-plan-label">PLANO 02</span>
+              <h3>Gold</h3>
+              <p class="mix-plan-subtitle">Para crescer com consistência.</p>
+              <p class="mix-plan-description">Diferencie seu estabelecimento com drinks exclusivos e uma equipe mais preparada.</p>
+            </div>
+            <div class="mix-plan-divider"></div>
+            <p class="mix-includes">TUDO DO PLANO PRATA, MAIS:</p>
+            <ul class="mix-plan-features">
+              <li>Criação de drinks autorais exclusivos</li>
+              <li>Treinamento e desenvolvimento da equipe</li>
+              <li>Técnicas de preparo, apresentação e padronização</li>
+              <li>Orientação sobre custos, precificação e rentabilidade</li>
+            </ul>
+            <a href="https://wa.me/5561981331246?text=Ol%C3%A1%21%20Tenho%20interesse%20no%20Plano%20Gold%20da%20Mix%20Craft%20Consultoria.%20Gostaria%20de%20receber%20mais%20informa%C3%A7%C3%B5es." class="mix-plan-button" target="_blank" rel="noopener noreferrer">Solicitar orçamento</a>
+          </article>
+
+          <article class="mix-plan mix-platinum">
+            <span class="mix-plan-badge">MAIS COMPLETO</span>
+            <div class="mix-plan-top">
+              <span class="mix-plan-label">PLANO 03</span>
+              <h3>Platinum</h3>
+              <p class="mix-plan-subtitle">Uma experiência completa de consultoria.</p>
+              <p class="mix-plan-description">Eleve o padrão dos drinks, capacite sua equipe e aprimore a gestão do bar.</p>
+            </div>
+            <div class="mix-plan-divider"></div>
+            <ul class="mix-plan-features">
+              <li>Cardápio completo com drinks autorais exclusivos e clássicos selecionados</li>
+              <li>Fichas técnicas detalhadas e orientação de precificação</li>
+              <li>Treinamento periódico da equipe</li>
+              <li>Desenvolvimento da dinâmica e da organização do trabalho</li>
+              <li>Apresentação prévia do cardápio e orientação de implantação</li>
+              <li>Acompanhamento consultivo presencial e remoto, conforme a proposta</li>
+            </ul>
+            <a href="https://wa.me/5561981331246?text=Ol%C3%A1%21%20Tenho%20interesse%20no%20Plano%20Platinum%20da%20Mix%20Craft%20Consultoria.%20Gostaria%20de%20receber%20mais%20informa%C3%A7%C3%B5es." class="mix-plan-button" target="_blank" rel="noopener noreferrer">Solicitar orçamento</a>
+          </article>
+        </div>
+
+        <div class="mix-plans-footer">
+          <span class="mix-eyebrow">SEU PRÓXIMO NÍVEL COMEÇA AQUI</span>
+          <h2>Seu bar pode <span>entregar mais.</span></h2>
+          <p>Cada estabelecimento possui desafios e objetivos diferentes. Desenvolvemos propostas personalizadas de acordo com a necessidade da sua operação.</p>
+          <a class="mix-contact-button" href="https://wa.me/5561981331246?text=Ol%C3%A1%21%20Tenho%20interesse%20na%20consultoria%20Mix%20Craft.%20Gostaria%20de%20conhecer%20os%20planos." target="_blank" rel="noopener noreferrer">Falar com um consultor <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </section>
+
     <section class="cta" id="contato">
       <div class="wrap">
         <div class="cta-box">
           <div class="eyebrow">Vamos conversar</div>
           <h2>Seu próximo cardápio pode começar aqui.</h2>
           <p>Quer organizar as fichas técnicas, revisar os custos ou desenvolver uma carta de drinks com a identidade do seu estabelecimento? Entre em contato para conversar sobre o projeto.</p>
-          <!-- TROQUE o número abaixo pelo seu WhatsApp com código do país. Exemplo: 5561999999999 -->
-          <a class="btn btn-gold" href="https://wa.me/5561981331246?text=Olá%2C%20quero%20conhecer%20a%20Mix%20Craft%20Consultoria." target="_blank" rel="noopener">Solicitar contato pelo WhatsApp ↗</a>
-          <p class="note"
+          <a class="btn btn-gold" href="https://wa.me/5561981331246?text=Ol%C3%A1%2C%20quero%20conhecer%20a%20Mix%20Craft%20Consultoria." target="_blank" rel="noopener noreferrer">Solicitar contato pelo WhatsApp ↗</a>
+          <p class="note">Atendimento mediante agendamento e definição do escopo de cada projeto.</p>
         </div>
       </div>
     </section>
@@ -168,10 +290,10 @@
 
   <footer>
     <div class="wrap footer-row">
-      <div><span class="gold">MIX CRAFT CONSULTORIA</span><br>Drinks com identidade. Gestão com estratégia.</div>
-      <div>© <span id="year"></span> Mix Craft Consultoria · Brasília, DF</div>
+      <span>© <span id="ano">2026</span> Mix Craft Consultoria. Todos os direitos reservados.</span>
+      <span>Drinks com identidade. Gestão com estratégia.</span>
     </div>
   </footer>
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
+
